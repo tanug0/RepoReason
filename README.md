@@ -1,11 +1,11 @@
 # RepoReason
 ### Understand Why Code Changed — With Git Evidence.
 
-RepoReason is a Git-based code evolution analysis tool that helps developers understand how code has changed over time, where specific functions originated, and what evidence is available behind those changes.
+RepoReason is a Git-based code evolution analysis tool that helps developers explore how code has changed over time and investigate the history of specific code sections.
 
-It analyzes actual Git history, commit messages, code diffs, and function-level changes to provide structured, evidence-backed insights into unfamiliar codebases.
+It analyzes available Git history, commit messages, and code diffs to provide a structured view of repository changes. Developers can explore commits, inspect modified files, and investigate selected functions or code ranges where supported.
 
-Rather than guessing developer intentions, RepoReason distinguishes between verified facts, reasonable inferences, and information that remains unknown.
+Rather than guessing developer intentions, RepoReason aims to distinguish between verified facts, reasonable inferences, and information that remains unknown.
 
 ---
 
@@ -70,61 +70,58 @@ It helps developers trace code origins, inspect historical changes, compare code
 
 - Explore the history of individual files.
 - Track changes across available commits.
-- Inspect historical code versions.
-- Understand how files evolved over time.
+- Inspect historical file versions where supported.
+- Understand how files evolved through Git history.
 
 ### 4. Code Mystery Detective
 
-Investigate the history of a specific function or selected code range.
+Investigate the history of a selected function or custom code range.
 
-- Detect functions and code symbols.
-- Identify their earliest known origin in the available Git history.
-- Trace subsequent modifications.
-- Display a chronological Code DNA Timeline.
-- Compare historical and current code snapshots.
-- Examine the available evidence behind code changes.
+- Detect supported functions and code symbols.
+- Explore the earliest identifiable occurrence in available Git history.
+- Inspect relevant historical modifications.
+- Compare previous and current code where supported.
+- Review available evidence behind code changes.
+
+Function detection and historical tracking may vary depending on programming language and repository history.
 
 ### 5. Evidence-Based Reports
 
-RepoReason organizes investigation findings into three categories:
+RepoReason uses an evidence classification approach to organize investigation findings:
 
 | Category | Meaning |
 |---|---|
 | VERIFIED | Directly supported by available Git evidence. |
-| INFERRED | A reasonable interpretation based on observed code changes. |
-| UNKNOWN | Information that cannot be established from the available evidence. |
+| INFERRED | A possible interpretation based on observed changes. |
+| UNKNOWN | Information that cannot be established from available evidence. |
 
-This approach helps prevent unsupported claims about why a developer made a particular change.
+This approach is designed to prevent unsupported claims about developer intent. Evidence reporting is currently under development.
 
-### 6. Missing Context Detection
+### 6. Missing Context Detection (Experimental)
 
-Highlights potential gaps in repository history, including:
+RepoReason aims to highlight potential gaps in repository history, such as:
 
 - Vague commit messages.
 - Missing issue or pull request references.
-- Missing or limited test-related changes.
-- Insufficient historical context.
+- Limited test-related changes.
 
-These are indicators for further investigation, not proof of poor code quality.
+These indicators require further investigation and do not establish poor code quality.
 
 ---
 
 ## Code Mystery Detective
 
-The Code Mystery Detective is a central feature of RepoReason.
+Code Mystery Detective is an experimental feature of RepoReason designed to investigate the history of a selected function or custom code range.
 
-It allows developers to investigate a selected function or code range and understand its evolution through available Git history.
+Depending on available Git history and language support, the investigation can help developers:
 
-The investigation can provide:
+- Explore the earliest identifiable code occurrence.
+- Inspect relevant historical commits.
+- Compare available code versions.
+- Review function-level modification history.
+- Examine evidence associated with code changes.
 
-- Earliest identifiable code origin.
-- Historical code snapshots.
-- Relevant commit information.
-- Function-level modification history.
-- A chronological Code DNA Timeline.
-- Evidence-backed findings.
-
-The goal is to make code evolution easier to investigate without presenting assumptions as facts.
+The feature is under development, and results may vary depending on repository history and code extraction support.
 
 ---
 
@@ -150,8 +147,8 @@ RepoReason keeps this distinction clear.
 2. **Analyze Repository:** RepoReason retrieves and analyzes the available Git history.
 3. **Explore Commits:** Inspect commit messages, changed files, and code differences.
 4. **Select Code:** Choose a function or manually specify a code range.
-5. **Investigate Evolution:** Trace the selected code's origin and subsequent changes.
-6. **Review Evidence:** Examine verified findings, inferred interpretations, and unknown context.
+5. **Investigate Evolution:** Explore the selected code's available origin and historical modifications where supported.
+6. **Review Evidence:** Examine available findings classified as verified, inferred, or unknown.
 
 ---
 
@@ -174,11 +171,11 @@ RepoReason keeps this distinction clear.
 ### Code Analysis
 
 - Python AST
-- Language-specific symbol detection
+- Regex-based symbol extraction
 - Git commit history
 - Git diff analysis
-- Git blame
-- Function-level history analysis
+- Git blame (where implemented)
+- Function-level history analysis (experimental)
 
 ---
 
@@ -348,6 +345,7 @@ Keep both backend and frontend servers running while using the application.
 - Function detection and history tracking may vary across programming languages.
 - Function tracking across extensive refactoring, renaming, or code movement may have limitations.
 - The current prototype is designed around public GitHub repositories.
+- Some investigation and evidence-reporting capabilities are still experimental and may not work consistently across all repositories.
 
 ---
 
@@ -364,7 +362,7 @@ Keep both backend and frontend servers running while using the application.
 
 ## Project Status
 
-RepoReason is a working prototype developed for **HackFront India 2026** under the **AI and Developer Tools** track.
+RepoReason is an actively developed prototype for HackFront India 2026 under the AI and Developer Tools track. Core repository exploration, commit history, and code diff functionality are implemented. Code Mystery Detective and evidence reporting are under development, with functionality depending on repository history and language-specific code extraction.
 
 ---
 
@@ -377,10 +375,6 @@ Built as a collaborative project focused on making code history easier to invest
 ---
 
 ## Core Philosophy
-
-**Code tells you what changed. Git history provides evidence of how it changed. RepoReason helps connect the two.**
-
----
 
 **Code tells you what changed. Git history provides evidence of how it changed. RepoReason helps connect the two.**
 
