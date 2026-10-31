@@ -14,6 +14,8 @@ Rather than guessing developer intentions, RepoReason distinguishes between veri
 ### Main Dashboard
 
 ![RepoReason Dashboard](docs/screenshots/dashboard.png)
+<img width="1916" height="906" alt="dashboard png" src="https://github.com/user-attachments/assets/75fca7f6-e007-49f6-bc61-3b5f7da20ee2" />
+
 
 ### Code Mystery Detective
 
