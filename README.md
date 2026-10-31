@@ -13,17 +13,18 @@ Rather than guessing developer intentions, RepoReason distinguishes between veri
 
 ### Main Dashboard
 
-![RepoReason Dashboard](docs/screenshots/dashboard.png)
 <img width="1916" height="906" alt="dashboard png" src="https://github.com/user-attachments/assets/75fca7f6-e007-49f6-bc61-3b5f7da20ee2" />
 
 
 ### Code Mystery Detective
 
-![Code Mystery Detective](docs/screenshots/code-detective.png)
+<img width="1917" height="903" alt="code-detective png" src="https://github.com/user-attachments/assets/fa5b8078-57ff-4866-bdd6-e8ca838d4476" />
+
 
 ### Evidence-Based Report
 
-![Evidence Report](docs/screenshots/evidence-report.png)
+<img width="1917" height="901" alt="evidence-report png" src="https://github.com/user-attachments/assets/b6e3b391-575a-45b4-825d-56669434ec13" />
+
 
 ---
 
